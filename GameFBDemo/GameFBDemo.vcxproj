@@ -138,7 +138,6 @@
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="Pipe.cpp" />
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +148,6 @@
     <ClInclude Include="Floor.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="Pipe.h" />
-    <ClInclude Include="Text.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

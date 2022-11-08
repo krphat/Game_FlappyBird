@@ -1,5 +1,50 @@
 #include "GameLoop.h"
 #include "TextureManager.h"
+
+// hien thi diem
+TTF_Font* font;
+int FontSize = 44;
+SDL_Surface* text_score_Suf;
+SDL_Texture* text_score_Tex;
+SDL_Rect text_score_Rect;
+int score = 0;
+string text_score;
+// hien thi diem cao nhat
+SDL_Surface* text_highScore_Suf;
+SDL_Texture* text_highScore_Tex;
+SDL_Rect text_highScore_Rect;
+int hightScore;
+string text_hightScore;
+// vi tri hien thi nut
+int positionPlayAgain;
+int positionExit;
+// FPS
+double first;
+double last = 0;
+//transcrip
+int Y_transcrip = 200;
+int W_stranscrip = 1117;
+int H_stranscrip = 1082;
+int W_display_stranscrip = 200;
+int H_display_stranscrip = 193;
+// gameover
+int Y_gameover = 100;
+int W_gameover = 192;
+int H_gameover = 42;
+int W_display_gameover = 192;
+int H_display_gameover = 42;
+// start screen;
+int W_startScreen = 2309;
+int H_startScreen = 3464;
+int Y_display_startScreen = 25;
+int W_display_startScreen = 400;
+int H_display_startScreen = 600;
+// audio
+int audio_rate = 22050;
+Uint16 audio_format = AUDIO_S16SYS;
+int audio_channels = 2;
+int audio_buffers = 4096;
+
 GameLoop::GameLoop() {
 	window = NULL;
 	renderer = NULL;
@@ -26,14 +71,14 @@ GameLoop::GameLoop() {
 	pipeUnder1.setScr(0, 0, pipeUnder1.getOriginalWidth(), pipeUnder1.getOriginalHeight());
 	pipeUnder2.setScr(0, 0, pipeUnder2.getOriginalWidth(), pipeUnder2.getOriginalHeight());
 	// TRANSCRIPT
-	transcript.setScr(0, 0, 1117, 1082);
-	transcript.setDes(WIDTH_SCREEEN / 2 - WIDTH_SCREEEN / 4, 200, 200, 193);
+	transcript.setScr(0, 0, W_stranscrip, H_stranscrip);
+	transcript.setDes(WIDTH_SCREEEN / 2 - WIDTH_SCREEEN / 4, Y_transcrip, W_display_stranscrip, H_display_stranscrip);
 	// GAMEOVER
-	gameOver.setScr(0, 0, 192, 42);
-	gameOver.setDes(WIDTH_SCREEEN / 2 - 192 / 2, 100, 192, 42);
+	gameOver.setScr(0, 0, W_gameover, H_gameover);
+	gameOver.setDes(WIDTH_SCREEEN / 2 - W_gameover / 2, Y_gameover, W_display_gameover, H_display_gameover);
 	// start screen
-	start_screen.setScr(0, 0, 2309, 3464);
-	start_screen.setDes(0, 25, 400, 600);
+	start_screen.setScr(0, 0, W_startScreen, H_startScreen);
+	start_screen.setDes(0, Y_display_startScreen, W_display_startScreen, H_display_startScreen);
 	// button
 }
 
@@ -53,7 +98,6 @@ void GameLoop::Initialize() {
 			gameState = true;
 
 			//TEXT
-			//Text_Score.InitText();
 			font = TTF_OpenFont("LuckiestGuy-Regular.ttf", FontSize);
 			
 			background.CreateTexture("image/background_plus.png", renderer);
@@ -85,7 +129,7 @@ void GameLoop::Initialize() {
 		else {
 			cout << "Khoi tao khong thanh cong" << endl;
 		}
-		if (Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 4096) == -1) {
+		if (Mix_OpenAudio(audio_rate, audio_format, audio_channels, audio_buffers) == -1) {
 			cout << "Khoi tao am thanh that bai !" << endl;
 		}
 		else {
@@ -163,7 +207,6 @@ void GameLoop::Update() {
 	floor2.MoveFloor2();
 	DisplayScore();
 	//text
-	//time = SDL_GetTicks() / 1000;
 	text_score = to_string(score);
 	text_score_Suf = TTF_RenderText_Solid(font, text_score.c_str(), { 255,255,255 });
 	text_score_Tex = SDL_CreateTextureFromSurface(renderer, text_score_Suf);
@@ -183,7 +226,6 @@ void GameLoop::Clean() {
 void GameLoop::Collide() {
 	if (Collide_Border() || Collide_Pipe()) {
 		Mix_PlayChannel(-1, sound_hit, 0);
-		//SDL_Delay(1000);
 		gameState = false;
 		running = true;
 	}

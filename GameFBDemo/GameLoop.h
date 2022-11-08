@@ -10,7 +10,6 @@
 #include "Pipe.h"
 #include <string>
 #include "Button.h"
-//#include "Text.h"
 #include "SDL_ttf.h"
 using namespace std;
 class GameLoop {
@@ -64,31 +63,13 @@ private:
 	// play again
 	Background backgroundAgain;
 	SDL_Event eventAgain;
-	double first;
-	double last = 0;
 	// transcript
 	Background transcript;
 	// game over
 	Background gameOver;
 	// start game
 	Background start_screen;
-	// hien thi diem
-	TTF_Font* font;
-	int FontSize = 44;
-	SDL_Surface* text_score_Suf;
-	SDL_Texture* text_score_Tex;
-	SDL_Rect text_score_Rect;
-	int score = 0;
-	string text_score;
-	// hien thi diem cao nhat
-	SDL_Surface* text_highScore_Suf;
-	SDL_Texture* text_highScore_Tex;
-	SDL_Rect text_highScore_Rect;
-	int hightScore;
-	string text_hightScore;
 	// BUTTON
 	Button playAgain;
 	Button Exit;
-	int positionPlayAgain;
-	int positionExit;
 };

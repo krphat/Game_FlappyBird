@@ -1,23 +1,8 @@
-﻿  Background.cpp
-  Bird.cpp
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\Bird.cpp(43,83): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\Bird.cpp(53,68): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  Button.cpp
-  Entity.cpp
-  Floor.cpp
-  GameLoop.cpp
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(305,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(309,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(326,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(334,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(375,19): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(391,19): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
-  Pipe.cpp
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\Pipe.cpp(33,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\Pipe.cpp(43,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Source.cpp
-C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\Source.cpp(6,12): warning C4101: 'event_exit': unreferenced local variable
-  Text.cpp
-  TextureManager.cpp
-  Generating Code...
+﻿  GameLoop.cpp
+C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(347,47): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(351,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(368,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(376,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(417,19): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
+C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\GameFBDemo\GameLoop.cpp(433,19): warning C4244: 'argument': conversion from 'double' to 'Uint32', possible loss of data
   GameFBDemo.vcxproj -> C:\Users\Dell\OneDrive\Tài liệu\GameFBDemo\x64\Debug\GameFBDemo.exe

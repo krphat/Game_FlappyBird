@@ -7,9 +7,7 @@ int main(int argc, char* argv[]) {
 	game->Initialize();
 	do {
 		game->Running();
-		cout << "out running" << endl;
 		game->PlayAgain();
-		cout << "out playagain" << endl;
 	} while (game->getGameState());
 	game->Clean();
 	return 0;
